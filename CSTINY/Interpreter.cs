@@ -159,7 +159,7 @@ public class Interpreter
             case ">": thenEnabled = (left > right); break;
             case ">=": thenEnabled = (left >= right); break;
             case "==": thenEnabled = (left == right); break;
-            case "!=": thenEnabled = (left != right); break;
+            case "<>" or "!=": thenEnabled = (left != right); break;
         }
 
         if (thenEnabled) { Visit(node.Statement); }

@@ -133,6 +133,7 @@ public class Lexer
 
                 case '<':
                     Consume();
+                    try { Match('>'); return new Token(TOKENTYPE.RELOP, "<>", rw, cl); } catch { }
                     try { Match('='); return new Token(TOKENTYPE.RELOP, "<=", rw, cl); }
                     catch (Exception) { return new Token(TOKENTYPE.RELOP, "<", rw, cl); }
 

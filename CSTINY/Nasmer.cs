@@ -243,7 +243,7 @@ public class Nasmer
             case ">": str += "\tjng .Line_end\n"; break;
             case ">=": str += "\tjnge .Line_end\n"; break;
             case "==": str += "\tjne .Line_end\n"; break;
-            case "!=": str += "\tje .Line_end\n"; break;
+            case "<>" or "!=": str += "\tje .Line_end\n"; break;
         }
 
         str += Visit(node.Statement);
